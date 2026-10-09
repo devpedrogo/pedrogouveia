@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #050811;
+    color: #e2e8f0;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Neon glow effects */
+  .neon-text-cyan {
+    color: #00f0ff;
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.3);
+  }
+
+  .neon-border-cyan {
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3), inset 0 0 5px rgba(0, 240, 255, 0.1);
+  }
+
+  .neon-glow-cyan {
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.4), 0 0 30px rgba(0, 240, 255, 0.2), 0 0 60px rgba(0, 240, 255, 0.1);
+  }
+
+  .neon-glow-cyan-strong {
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 40px rgba(0, 240, 255, 0.4), 0 0 80px rgba(0, 240, 255, 0.2);
+  }
+
+  .neon-text-blue {
+    color: #00a8ff;
+    text-shadow: 0 0 8px rgba(0, 168, 255, 0.6), 0 0 20px rgba(0, 168, 255, 0.3);
+  }
+
+  .neon-border-blue {
+    box-shadow: 0 0 5px rgba(0, 168, 255, 0.5), 0 0 20px rgba(0, 168, 255, 0.3), inset 0 0 5px rgba(0, 168, 255, 0.1);
+  }
+
+  /* Grid background pattern */
+  .grid-pattern {
+    background-image:
+      linear-gradient(rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Dot pattern */
+  .dot-pattern {
+    background-image: radial-gradient(circle, rgba(0, 240, 255, 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Comic-style 3D pop */
+  .comic-pop {
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000, 0 0 15px rgba(0, 240, 255, 0.3);
+  }
+
+  .comic-pop-hover {
+    transition: all 0.2s ease;
+  }
+
+  .comic-pop-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000, 0 0 25px rgba(0, 240, 255, 0.5);
+  }
+
+  /* Animated gradient text */
+  .gradient-text-cyan {
+    background: linear-gradient(135deg, #00f0ff 0%, #00a8ff 50%, #00f0ff 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Glow pulse animation */
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.3), 0 0 30px rgba(0, 240, 255, 0.15);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 50px rgba(0, 240, 255, 0.25);
+    }
+  }
+
+  .glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  /* Float animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .float-animation {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  /* Comic book halftone pattern for card backgrounds */
+  .halftone-pattern {
+    background-image: radial-gradient(circle, rgba(0, 240, 255, 0.12) 1.5px, transparent 1.5px);
+    background-size: 10px 10px;
+  }
+
+  .halftone-pattern-yellow {
+    background-image: radial-gradient(circle, rgba(254, 208, 0, 0.1) 1.5px, transparent 1.5px);
+    background-size: 10px 10px;
+  }
+
+  /* Neo-brutalist comic card hover: jump up-left, bigger solid shadow */
+  .comic-card-hover {
+    transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.18s ease;
+  }
+
+  .comic-card-hover:hover {
+    transform: translate(-6px, -6px);
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050811;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 240, 255, 0.3);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 240, 255, 0.5);
+  }
+}
