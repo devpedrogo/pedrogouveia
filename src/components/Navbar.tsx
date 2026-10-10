@@ -20,6 +20,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Função para garantir a rolagem suave no mobile e desktop
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    setMobileOpen(false);
+
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      // Pequeno timeout para permitir que a interface processe o fecho do menu
+      setTimeout(() => {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
@@ -42,8 +56,6 @@ export default function Navbar() {
               <Terminal className="w-5 h-5 text-black" strokeWidth={2.5} />
             </div>
             <span className="text-lg font-bold tracking-tight neon-text-cyan font-[Space_Grotesk]">
-              {/* {personalInfo.name.split(' ').map((w) => w[0]).join('')}
-              <span className="text-white">.dev</span> */}
               devpedrogo
             </span>
           </a>
@@ -54,6 +66,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="px-4 py-2 text-sm font-bold text-slate-300 hover:text-black hover:bg-[#fed000] rounded-lg border-2 border-transparent hover:border-black hover:shadow-[3px_3px_0px_0px_#000] transition-all"
               >
                 {link.label}
@@ -62,6 +75,7 @@ export default function Navbar() {
             <a
               href={personalInfo.cvUrl}
               target="_blank"
+              rel="noopener noreferrer"
               className="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-black bg-cyan-400 text-black font-bold text-sm shadow-[3px_3px_0px_0px_#000] hover:shadow-[5px_5px_0px_0px_#fed000] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all"
             >
               <Download className="w-4 h-4" />
@@ -95,7 +109,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="block px-4 py-3 rounded-lg border-2 border-slate-700 text-slate-300 hover:text-black hover:bg-[#fed000] hover:border-black font-bold transition-colors"
                 >
                   {link.label}
@@ -104,6 +118,7 @@ export default function Navbar() {
               <a
                 href={personalInfo.cvUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg border-2 border-black bg-cyan-400 text-black font-bold shadow-[3px_3px_0px_0px_#000]"
               >
