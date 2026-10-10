@@ -34,8 +34,28 @@ export const projects: Project[] = [
       '/aisearcher.png',
     techStack: ['Java', 'Spring Boot', 'Angular', 'REST API'],
     githubUrl: 'https://github.com/devpedrogo/aimoviesearcher.git',
-    demoUrl: '#',
-  }
+    demoUrl: 'https://github.com/devpedrogo/ai-movie-searcher-frontend.git',
+  },
+  {
+    title: 'Rede Solidária',
+    description:
+      'Plataforma web full-stack para gestão de doações e projetos sociais, desenvolvida com React e Spring Boot.',
+    image:
+      '/rede-solidaria.png',
+    techStack: ['Java', 'Spring Boot', 'React', 'REST API'],
+    githubUrl: 'https://github.com/devpedrogo/rede_solidaria_spring.git',
+    demoUrl: 'https://rede-solidaria-frontend.vercel.app/',
+  },
+  {
+    title: 'Módulo Completo de Autenticação',
+    description:
+      'Módulo base em Java com Spring Boot e Spring Security para autenticação e autorização via tokens JWT e refresh tokens com persistência no PostgreSQL.',
+    image:
+      '/auth.png',
+    techStack: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'PostgreSQL', 'REST API'],
+    githubUrl: 'https://github.com/devpedrogo/authentication_project.git',
+    demoUrl: 'https://github.com/devpedrogo/authentication_project.git',
+  },
 ];
 
 export const techStack: Tech[] = [
