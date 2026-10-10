@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Mail, Github, Linkedin, Sparkles } from 'lucide-react';
+import { ArrowDown, Mail, Github, Linkedin, Sparkles, Hand } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
 
 export default function Hero() {
@@ -37,8 +37,14 @@ export default function Hero() {
             >
               <span className="text-white">Olá, eu sou </span>
               <span className="gradient-text-cyan">{personalInfo.name}</span>
-              <span className="inline-block ml-2" style={{ animation: 'wave 2.5s ease-in-out infinite', transformOrigin: '70% 70%' }}>
-                👋
+              <span 
+                className="inline-flex items-center ml-2 p-1 bg-[#fed000] border-2 border-black rounded-lg shadow-[2px_2px_0px_0px_#000] -rotate-6 align-middle"
+                style={{ 
+                  animation: 'wave 2.5s ease-in-out infinite', 
+                  transformOrigin: '70% 70%' 
+                }}
+              >
+                <Hand className="w-6 h-6 text-black fill-[#fed000]" strokeWidth={2.5} />
               </span>
             </motion.h1>
 
