@@ -3,6 +3,33 @@ import { techStack, type Tech } from '@/data/portfolio';
 
 const cardRotations = ['-rotate-1', 'rotate-1', '-rotate-2', 'rotate-2'];
 
+// ☕ Java (Logótipo Oficial do Java via CDN)
+export const JavaIcon = ({ className = "w-7 h-7" }) => (
+  <img 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" 
+    alt="Java" 
+    className={`${className} brightness-0`} 
+  />
+);
+
+// 🍃 Spring Boot
+export const SpringIcon = ({ className = "w-7 h-7" }) => (
+  <img 
+    src="https://cdn.simpleicons.org/springboot/000000" 
+    alt="Spring Boot" 
+    className={className} 
+  />
+);
+
+// 🅰️ Angular
+export const AngularIcon = ({ className = "w-7 h-7" }) => (
+  <img 
+    src="https://cdn.simpleicons.org/angular/000000" 
+    alt="Angular" 
+    className={className} 
+  />
+);
+
 function TechCard({ tech, index }: { tech: Tech; index: number }) {
   const Icon = tech.icon;
   const isPrimary = tech.category === 'primary';
