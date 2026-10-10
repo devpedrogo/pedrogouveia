@@ -1,12 +1,9 @@
 import {
   Database,
   Server,
-  Code2,
   Container,
   GitBranch,
-  Layout,
   Shield,
-  Layers,
 } from 'lucide-react';
 
 import { JavaIcon, AngularIcon, SpringIcon } from '@/components/TechStack';
