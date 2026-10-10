@@ -102,7 +102,7 @@ export default function Projects() {
           </h2>
           <div className="mt-4 mx-auto w-24 h-1 bg-cyan-400 rounded-full neon-glow-cyan" />
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-            Uma seleção dos projetos que construi, focando em arquitetura escalável e experiências de usuário excepcionais.
+            Uma seleção dos projetos que construí, focando em arquitetura escalável e experiências de usuário excepcionais.
           </p>
         </motion.div>
 
