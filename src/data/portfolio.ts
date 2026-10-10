@@ -9,6 +9,8 @@ import {
   Layers,
 } from 'lucide-react';
 
+import { JavaIcon, AngularIcon, SpringIcon } from '@/components/TechStack';
+
 export interface Project {
   title: string;
   description: string;
@@ -21,7 +23,7 @@ export interface Project {
 export interface Tech {
   name: string;
   category: 'primary' | 'tools';
-  icon: typeof Database;
+  icon: string | React.ComponentType<React.SVGProps<SVGSVGElement>>;
   description: string;
 }
 
@@ -62,19 +64,19 @@ export const techStack: Tech[] = [
   {
     name: 'Java',
     category: 'primary',
-    icon: Code2,
+    icon: JavaIcon,
     description: 'Backend robusto e escalável',
   },
   {
     name: 'Spring Boot',
     category: 'primary',
-    icon: Layers,
+    icon: SpringIcon,
     description: 'Frameworks e microsservicos',
   },
   {
     name: 'Angular',
     category: 'primary',
-    icon: Layout,
+    icon: AngularIcon,
     description: 'SPAs dinâmicas e responsivas',
   },
   {
